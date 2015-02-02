@@ -8,7 +8,7 @@
 }
 
 .btn-shadow-inverse(@color) {
-  #gradient > .vertical-three-colors(darken(@color, 0%), darken(@color, 14%), 0%, darken(@color, 14%));
+  #gradient > .vertical-three-colors(darken(@color, 0%), darken(@color, 3%), 0%, darken(@color, 3%));
   filter: none;
 }
 
@@ -29,8 +29,8 @@
   }
 
   &-nav > li > a {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: transparent;
+    border-left: transparent;
 
     &:hover {
       .btn-shadow-inverse(@navbar-default-bg);

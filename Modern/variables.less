@@ -10,10 +10,10 @@
 // New Lighter Grey
 @gray-base:              #000;
 @gray-darker: #34373a; // #222
-@gray-dark: #474a4e;   // #333
-@gray: #606266; // #555
-@gray-light: #777a7e;   // #999
-@gray-lighter: #a39fa1; // #eee
+@gray-dark: #1c1e22;   // #333
+@gray: #5a6366; // #555
+@gray-light: #72787e;   // #999
+@gray-lighter: #98a0a3; // #eee
 
 
 @brand-primary:         @gray-light;
@@ -137,15 +137,15 @@
 @table-condensed-cell-padding:  5px;
 
 //** Default background color used for all tables.
-@table-bg:                      lighten(@body-bg, 3%);
+@table-bg:                      darken(@body-bg, 3%);
 //** Background color used for `.table-striped`.
-@table-bg-accent:               lighten(@table-bg, 3%);
+@table-bg-accent:               darken(@table-bg, 3%);
 //** Background color used for `.table-hover`.
-@table-bg-hover:                lighten(@table-bg, 12%);
+@table-bg-hover:                darken(@table-bg, 8%);
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            darken(@gray-darker, 5%);
+@table-border-color:            darken(@gray-darker, 10%);
 
 
 //== Buttons
@@ -374,7 +374,7 @@
 @navbar-default-link-hover-color:          #fff;
 @navbar-default-link-hover-bg:             darken(@navbar-default-bg, 8%);
 @navbar-default-link-active-color:         #fff;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 8%);
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 3%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -391,28 +391,28 @@
 
 // Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      #ccc;
-@navbar-inverse-bg:                         @brand-primary;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-color:                      @text-color;
+@navbar-inverse-bg:                         @gray-dark;
+@navbar-inverse-border:                     darken(@navbar-default-bg, 6.5%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #ccc;
+@navbar-inverse-link-color:                 @text-color;
 @navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 12%);
-@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
-@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 12%);
+@navbar-inverse-link-hover-bg:              darken(@navbar-default-bg, 8%);
+@navbar-inverse-link-active-color:          #fff;
+@navbar-inverse-link-active-bg:             darken(@navbar-default-bg, 3%);
 @navbar-inverse-link-disabled-color:        #ccc;
 @navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
-@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-color:                @navbar-default-link-color;
 @navbar-inverse-brand-hover-color:          #fff;
 @navbar-inverse-brand-hover-bg:             none;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            darken(@navbar-inverse-bg, 12%);
-@navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        darken(@navbar-inverse-bg, 12%);
+@navbar-inverse-toggle-hover-bg:            darken(@navbar-default-bg, 8%);
+@navbar-inverse-toggle-icon-bar-bg:         @text-color;
+@navbar-inverse-toggle-border-color:        darken(@navbar-default-bg, 8%);
 
 
 //== Navs
