@@ -5736,7 +5736,7 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: rgba(24, 27, 32, 0.7);
+  background-color: #2a2d30;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 0px;
