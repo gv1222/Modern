@@ -1,5 +1,6 @@
 // Slate 3.3.2
 // Bootswatch
+// Commenting a lot of things out, trying to get my head around where a lot of these random hover colours are
 // -----------------------------------------------------
 
 .btn-shadow(@color) {
@@ -8,7 +9,7 @@
 }
 
 .btn-shadow-inverse(@color) {
-  #gradient > .vertical-three-colors(darken(@color, 0%), darken(@color, 3%), 0%, darken(@color, 3%));
+  #gradient > .vertical-three-colors(darken(@color, 0%), darken(@color, 0%), 0%, darken(@color, 0%));
   filter: none;
 }
 
@@ -16,24 +17,24 @@
 
 .navbar {
 
-  .btn-shadow(@navbar-default-bg);
+  //.btn-shadow(@navbar-default-bg);
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-  &-inverse {
-    .btn-shadow(@navbar-inverse-bg);
+  /*&-inverse {
+    //.btn-shadow(@navbar-inverse-bg);
 
     .badge {
       background-color: @navbar-inverse-link-active-bg;
     }
-  }
+  }*/
 
   &-nav > li > a {
     border-right: transparent;
     border-left: transparent;
 
     &:hover {
-      .btn-shadow-inverse(@navbar-default-bg);
+      //.btn-shadow-inverse(@navbar-default-bg);
       border-left-color: transparent;
     }
   }
@@ -56,55 +57,55 @@
 
 .btn,
 .btn:hover {
-  border-color: rgba(0, 0, 0, 0.6);
+  //border-color: rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .btn-default {
-  .btn-shadow(@btn-default-bg);
+  //.btn-shadow(@btn-default-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-default-bg);
+    //.btn-shadow-inverse(@btn-default-bg);
   }
 }
 
 .btn-primary {
-  .btn-shadow(@btn-primary-bg);
+  //.btn-shadow(@btn-primary-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-primary-bg);
+    //.btn-shadow-inverse(@btn-primary-bg);
   }
 }
 
 .btn-success {
-  .btn-shadow(@btn-success-bg);
+  //.btn-shadow(@btn-success-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-success-bg);
+    //.btn-shadow-inverse(@btn-success-bg);
   }
 }
 
 .btn-info {
-  .btn-shadow(@btn-info-bg);
+  //.btn-shadow(@btn-info-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-info-bg);
+    //.btn-shadow-inverse(@btn-info-bg);
   }
 }
 
 .btn-warning {
-  .btn-shadow(@btn-warning-bg);
+  //.btn-shadow(@btn-warning-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-warning-bg);
+    //.btn-shadow-inverse(@btn-warning-bg);
   }
 }
 
 .btn-danger {
-  .btn-shadow(@btn-danger-bg);
+  //.btn-shadow(@btn-danger-bg);
 
   &:hover {
-    .btn-shadow-inverse(@btn-danger-bg);
+    //.btn-shadow-inverse(@btn-danger-bg);
   }
 }
 
@@ -150,6 +151,7 @@ h4 {
 // Tables =====================================================================
 
 .table {
+  border: 1px solid @modern-border;
 
   .success,
   .warning,
@@ -244,7 +246,7 @@ legend {
 .input-group-addon {
   border-color: rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  .btn-shadow(@btn-default-bg);
+  //.btn-shadow(@btn-default-bg);
   color: @btn-default-color;
 }
 
@@ -255,7 +257,7 @@ legend {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: rgba(0, 0, 0, 0.6);
+    border-color: @modern-border;
   }
 
 }
@@ -263,26 +265,30 @@ legend {
 .nav-pills {
 
   & > li > a {
-    .btn-shadow(@btn-default-bg);
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    //.btn-shadow(@btn-default-bg);
+    border: 1px solid @modern-border;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background-color: @gray-dark;
 
     &:hover {
-      .btn-shadow-inverse(@btn-default-bg);
-      border: 1px solid rgba(0, 0, 0, 0.6);
+      //.btn-shadow-inverse(@btn-default-bg);
+      border: 1px solid @modern-border;
+      background-color: @modern-hover;
+
     }
   }
 
   & > li.active > a,
   & > li.active > a:hover {
-    background-color: none;
-    .btn-shadow-inverse(@btn-default-bg);
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: @modern-active;
+    //.btn-shadow-inverse(@btn-default-bg);
+    border: 1px solid @modern-border;
   }
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    .btn-shadow(@btn-default-bg);
+    //.btn-shadow(@btn-default-bg);
+    background-color: @modern-disabled;
   }
 }
 
@@ -291,49 +297,49 @@ legend {
   & > li > a,
   & > li > span {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    .btn-shadow(@btn-default-bg);
+    //.btn-shadow(@btn-default-bg);
 
     &:hover {
-      .btn-shadow-inverse(@btn-default-bg);
+      //.btn-shadow-inverse(@btn-default-bg);
     }
   }
 
   & > li.active > a,
   & > li.active > span {
-    .btn-shadow-inverse(@btn-default-bg);
+    //.btn-shadow-inverse(@btn-default-bg);
   }
 
   & > li.disabled > a,
   & > li.disabled > a:hover,
   & > li.disabled > span,
   & > li.disabled > span:hover {
-    background-color: transparent;
-    .btn-shadow(@btn-default-bg);
+    background-color: @modern-disabled;
+    //.btn-shadow(@btn-default-bg);
   }
 }
 
 .pager {
 
   & > li > a {
-    .btn-shadow(@btn-default-bg);
+    //.btn-shadow(@btn-default-bg);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
     &:hover {
-      .btn-shadow-inverse(@btn-default-bg);
+      //.btn-shadow-inverse(@btn-default-bg);
     }
   }
 
   & > li.disabled > a,
   & > li.disabled > a:hover {
-    background-color: transparent;
-    .btn-shadow(@btn-default-bg);
+    background-color: @modern-disabled;
+    //.btn-shadow(@btn-default-bg);
   }
 }
 
 .breadcrumb {
-  border: 1px solid rgba(0, 0, 0, 0.6);
+  border: 1px solid @modern-border;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  .btn-shadow(@btn-default-bg);
+//  .btn-shadow(@btn-default-bg);
 }
 
 // Indicators =================================================================
